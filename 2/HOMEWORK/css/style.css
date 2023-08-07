@@ -1,0 +1,125 @@
+.wrap {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 15px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header-task {
+  font-size: 20px;
+  margin: 0 0 25px 15px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.list {
+  margin: 25px 0;
+}
+
+li {
+  margin-left: 25px;
+  list-style: none;
+}
+
+.header-li {
+  display: block;
+  margin-left: -15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.code-wrap {
+  background-color: bisque;
+  padding: 10px;
+  border: 3px solid salmon;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+q {
+  color: blue;
+}
+
+code {
+  display: inline-block;
+  background-color: azure;
+  padding: 5px;
+}
+
+.quote-wrap {
+  display: inline-block;
+  border: 1px dotted red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+blockquote {
+  margin: 25px 0px 25px 35px;
+}
+
+/* Task 2 */
+
+a[href^="https"] {
+  color: #f00;
+}
+
+a[href^="http:"] {
+  color: #ff8d00;
+}
+
+ul + p {
+  font-size: 26px;
+}
+
+a[title] {
+  border: 1px solid #067b09;
+}
+
+/* Task 3 */
+
+.text-box h3:first-child {
+  color: pink;
+}
+
+#greycol {
+  color: grey;
+}
+
+.text-box div p {
+  color: red;
+}
+
+h3[title="text"] {
+  color: blue;
+}
+
+h3[title="text"] + p {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.text-box h3 {
+  font-size: initial;
+  font-weight: initial;
+  font-style: initial;
+  text-align: initial;
+}
+
+hr {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}

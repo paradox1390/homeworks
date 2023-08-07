@@ -1,0 +1,255 @@
+:root {
+  --item-gap: 10px;
+  --num-work-col: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 105px;
+  padding: 25px;
+  background-color: #d3b714;
+  align-items: center;
+}
+
+/* Menu */
+#menu__toggle {
+  display: none;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* Menu box */
+.menu_box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #9fac8b75;
+  backdrop-filter: blur(25px);
+}
+
+.list_item {
+  display: block;
+  padding: 10px 0;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.list_item:hover {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.list_item a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu_box {
+  visibility: visible;
+  right: 0;
+}
+
+/* Main */
+.main_container {
+  flex-grow: 1;
+  display: flex;
+}
+.main {
+  flex-grow: 4;
+  padding: 35px 20px;
+  width: min-content;
+}
+
+.main_description {
+  margin-bottom: 30px;
+}
+
+.main_head {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+}
+
+.works_items_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: var(--item-gap);
+}
+.work_item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 15px;
+  width: calc(
+    (100% - var(--item-gap) * (var(--num-work-col) - 1)) / var(--num-work-col)
+  );
+  border: 1px solid #a3a3a3;
+  border-radius: 15px;
+}
+.work_item_main_content_wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.work_item_main_content_img {
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid #c7b7b7;
+}
+.work_item_main_content_head {
+  margin: 0;
+  text-align: center;
+}
+.work_item_main_content_descroption {
+  margin: 0;
+  text-align: center;
+}
+.work_item_link {
+  text-decoration: none;
+  padding: 5px 15px;
+  background-color: #685174;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Aside */
+.left-aside {
+  display: none;
+  flex-grow: 1;
+  order: -1;
+  background-color: #c798b9;
+  text-align: center;
+}
+
+.right-aside {
+  display: none;
+  flex-grow: 1;
+  background-color: #9cb1c7;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #83e683;
+  text-align: center;
+}
+
+/* Media */
+
+@media screen and (min-width: 550px) {
+  .menu_box {
+    position: initial;
+    display: flex;
+    visibility: visible;
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    gap: 15px;
+    width: fit-content;
+  }
+  .menu__btn,
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 530px) {
+  :root {
+    --num-work-col: 2;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .right-aside {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  :root {
+    --item-gap: 10px;
+    --num-work-col: 3;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .left-aside {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  :root {
+    --item-gap: 10px;
+    --num-work-col: 4;
+  }
+}

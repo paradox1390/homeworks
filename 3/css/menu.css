@@ -1,0 +1,53 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.menu {
+  background-color: grey;
+  height: 100vh;
+  width: 35px;
+  display: table-cell;
+  vertical-align: middle;
+  transition: all 0.4s;
+}
+
+.menu:hover {
+  width: 350px;
+  vertical-align: top;
+}
+.menu_title {
+  font-size: 24px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.menu_list {
+  display: none;
+  margin-top: 150px;
+}
+
+.menu:hover .menu_title {
+  display: none;
+  width: 350px;
+}
+
+.menu:hover .menu_list {
+  display: block;
+}
+
+.list_item {
+  margin: 20px;
+  list-style: url(../images/l3.png);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+a:hover {
+  color: black;
+  font-weight: bolder;
+}

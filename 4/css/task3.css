@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+}
+.wrap {
+  background-color: azure;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 250px);
+  width: 530px;
+  height: 530px;
+}
+.box {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  animation: moving-box 5s infinite;
+}
+
+@keyframes moving-box {
+  0% {
+    top: 30px;
+    left: 30px;
+    background-color: red;
+  }
+  25% {
+    top: 400px;
+    left: 30px;
+    background-color: blue;
+  }
+  50% {
+    top: 400px;
+    left: 400px;
+    background-color: green;
+  }
+  75% {
+    top: 30px;
+    left: 400px;
+    background-color: yellow;
+  }
+  100% {
+    top: 30px;
+    left: 30px;
+    background-color: red;
+  }
+}

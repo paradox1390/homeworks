@@ -1,0 +1,67 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.menu {
+  background-color: grey;
+  width: 35px;
+  transition: all 0.3s;
+}
+
+/* side label menu */
+.label_wrap {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vh;
+}
+
+.label {
+  font-size: 35px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  font-weight: 900;
+  opacity: 100;
+  transition: all 0.2s ease-in;
+}
+
+.menu:hover {
+  width: 280px;
+}
+
+.menu:hover .label {
+  opacity: 0;
+}
+
+/* menu list */
+.menu_list {
+  display: table-cell;
+  width: 350px;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.menu:hover .menu_list {
+  opacity: 100;
+}
+
+.list {
+  margin-top: 50px;
+  padding: 15px;
+}
+.list_item {
+  margin: 20px 0 20px 0;
+  list-style: url(../images/l3.png);
+}
+
+/* style links */
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+a:hover {
+  color: black;
+  font-weight: bolder;
+}

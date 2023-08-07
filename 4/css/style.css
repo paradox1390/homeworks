@@ -1,0 +1,58 @@
+body {
+  background-color: #0d5825;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.wrap {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.quote {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.hand_wrap {
+  padding: 100px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.hand {
+  position: relative;
+}
+.card {
+  position: absolute;
+  display: block;
+  width: 150px;
+}
+.card-1 {
+  left: 190px;
+  transform: rotate(-25deg);
+  transition: all 0.5s;
+  top: 0;
+}
+.card-2 {
+  left: 245px;
+  transform: rotate(-8deg);
+  transition: all 0.5s;
+  top: 0;
+}
+.card-3 {
+  top: 20px;
+  left: 300px;
+  transform: rotate(8deg);
+  transition: all 0.5s;
+}
+
+.card-1:hover {
+  top: -30px;
+}
+.card-2:hover {
+  top: -30px;
+}
+.card-3:hover {
+  top: -10px;
+}

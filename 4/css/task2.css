@@ -1,0 +1,28 @@
+.wrap {
+  width: 500px;
+  height: 500px;
+  margin: 150px auto 0;
+  position: relative;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.item-1 {
+  background-color: rgb(225, 104, 104);
+}
+.item-2 {
+  position: absolute;
+  background-color: rgb(73, 73, 165);
+  top: 150px;
+  left: 150px;
+  z-index: 2;
+}
+.item-3 {
+  position: absolute;
+  background-color: rgb(48, 170, 48);
+  top: 300px;
+  left: 300px;
+}
